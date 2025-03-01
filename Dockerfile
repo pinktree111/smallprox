@@ -9,10 +9,11 @@ COPY requirements.txt .
 COPY app.py .
 
 # Installa le dipendenze
+RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Espone la porta 5000 per Flask
-EXPOSE 5000
+EXPOSE 7860
 
 # Comando per avviare il server Flask
 CMD ["python", "app.py"]
